@@ -8,35 +8,34 @@ package chatserver.domain;
 import chatserver.gui.ServerGui;
 import java.io.IOException;
 import java.awt.EventQueue;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.concurrent.ConcurrentHashMap;
 
 
-/**
- *
- * @author Idorf
- */
 public class Server {
-      
-    public Server() throws IOException
+    
+
+    public Server() throws IOException 
     {
         
-        EventQueue.invokeLater(new Runnable()
-		{
-			public void run()
-			{
-				try
-				{
-					new ServerGui();
-                                        
-				} catch (Exception e)
-				{
-					e.printStackTrace();
-				}
-			}
-		});
+        runGui();
+        
+        runClientHandler();
                 
-        System.out.println("waiting");
+    }
+   	
+    public void runGui() throws IOException
+    {
+
+        Controller.getServerGuiInstance();
+    }
+    
+    public void runClientHandler() throws IOException
+    {
+
+        Controller.getClientHandlerInstance();
+        System.out.println(" getClientHandlerInstancee");
 
     }
-
-    
 }

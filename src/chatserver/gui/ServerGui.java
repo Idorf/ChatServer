@@ -54,7 +54,7 @@ public class ServerGui extends JFrame
 
 
 	@SuppressWarnings("unchecked")
-	public ServerGui() throws IOException
+	public  ServerGui() throws IOException
 	{
                 setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -93,7 +93,8 @@ public class ServerGui extends JFrame
 		btnKick = new JButton("Kick");
 		btnKick.setBounds(357, 209, 127, 29);
 		contentPane.add(btnKick);
-		
+		System.out.println(" gui  code done");
+
 	}
 
 
