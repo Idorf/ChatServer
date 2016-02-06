@@ -5,7 +5,7 @@
  */
 package chatserver;
 
-import chatserver.domain.Start;
+import domain.Start;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

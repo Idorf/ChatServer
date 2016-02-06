@@ -1,5 +1,4 @@
 package chatserver.gui;
-import chatserver.domain.Controller;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -19,13 +18,13 @@ import javax.swing.JButton;
 import javax.swing.border.LineBorder;
 import javax.swing.border.BevelBorder;
 
+
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.TitledBorder;
 
 
 public class ServerGui extends JFrame
 {
-	private Controller controller;
 	private JPanel contentPane;
 	private JTextField userTextField;
 	private JList chatBox;
@@ -34,11 +33,30 @@ public class ServerGui extends JFrame
 	private Image backgroundImage;
 	private JButton btnKick;
 
+
+//	public static void main(String[] args)
+//	{
+//		EventQueue.invokeLater(new Runnable()
+//		{
+//			public void run()
+//			{
+//				try
+//				{
+//					ServerGui frame = new ServerGui();
+//					frame.setVisible(true);
+//				} catch (Exception e)
+//				{
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
+
+
 	@SuppressWarnings("unchecked")
 	public ServerGui() throws IOException
 	{
-            	setVisible(true);
-		controller = Controller.getControllerInstance();
+                setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 497, 300);
 		contentPane = new JPanel();
@@ -77,7 +95,7 @@ public class ServerGui extends JFrame
 		contentPane.add(btnKick);
 		
 	}
-	
+
 
 }
 

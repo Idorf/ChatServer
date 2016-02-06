@@ -7,6 +7,8 @@ package chatserver.domain;
 
 import chatserver.gui.ServerGui;
 import java.io.IOException;
+import java.awt.EventQueue;
+
 
 /**
  *
@@ -16,8 +18,22 @@ public class Server {
       
     public Server() throws IOException
     {
-        new ServerGui();
         
+        EventQueue.invokeLater(new Runnable()
+		{
+			public void run()
+			{
+				try
+				{
+					new ServerGui();
+                                        
+				} catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+		});
+                
         System.out.println("waiting");
 
     }
